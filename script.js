@@ -40,7 +40,38 @@ window.addEventListener('wheel', (e) => {
 
     console.log(counter)
 
-})
+});
+
+const rightBtn = document.querySelector('.right-btn');
+const leftBtn = document.querySelector('.left-btn');
+
+rightBtn.addEventListener('click', () => {
+    if (counter < 5) {
+        document.querySelector(`.section-${counter}`).style.left = "-100vw";
+        counter++;
+    } else if (counter >= 5) {
+        for (let i = 1; i <= 5; i++) {
+            document.querySelector(`.section-${i}`).style.left = "0";
+        }
+        counter = 1;
+    }
+
+    progressCounter();
+});
+
+leftBtn.addEventListener('click', () => {
+    if (counter > 1) {
+        counter--;
+        document.querySelector(`.section-${counter}`).style.left = "0";
+    } else if (counter <= 1) {
+        for (let i = 1; i < 5; i++) {
+            document.querySelector(`.section-${i}`).style.left = "-100vw";
+        }
+        counter = 5;
+    }
+
+    progressCounter();
+});
 
 
 /* End of My own solution */
