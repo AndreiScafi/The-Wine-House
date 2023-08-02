@@ -162,6 +162,10 @@ section {
     margin: 0 .3rem;
 }
 
+.circle-1 {
+    background-color: #ddd;
+}
+
 /* End of Progress Wrapper */
 
 /* Section 1 */

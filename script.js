@@ -3,8 +3,15 @@
 
 
 const progress = document.querySelector('.progress h2');
+const circles = document.querySelectorAll('.circle');
+
+
 const progressCounter = () => {
-    progress.textContent = `${counter}/5`
+    progress.textContent = `${counter}/5`;
+    circles.forEach(circle => {
+        circle.style.backgroundColor = 'transparent';
+    });
+    document.querySelector(`.circle-${counter}`).style.backgroundColor = '#ddd';
 }
 
 
