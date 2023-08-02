@@ -88,6 +88,46 @@ section {
 
 /* End of Navbar */
 
+/* Navigation Buttons */
+
+.page-btn {
+    position: fixed;
+    z-index: 100;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+}
+
+.page-btn img {
+    width: 4rem;
+    opacity: .4;
+    cursor: pointer;
+    transition: opacity .2s;
+}
+
+.page-btn img:hover {
+    opacity: 1;
+}
+
+.left-btn {
+    left: 4rem;
+}
+
+.left-btn img {
+    transform: rotate(-90deg);
+}
+
+.right-btn {
+    right: 4rem;
+}
+
+.right-btn img {
+    transform: rotate(90deg);
+}
+
+/* End of Navigation Buttons */
+
 /* Section 1 */
 
 .section-5 {
