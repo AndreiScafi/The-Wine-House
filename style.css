@@ -110,3 +110,37 @@ section {
 }
 
 /* End of Section 2 */
+
+/* Section 3 */
+
+.section-3-wrapper {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)), url(./images/section-3-bg.jpg) center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-3-heading {
+    font-size: 20rem;
+    color: #ccc;
+    text-transform: uppercase;
+    transform: rotate(-20deg);
+    text-align: center;
+    text-shadow: 0 .5rem 1.5rem #000;
+    user-select: none;
+}
+
+.frame-img {
+    width: 100rem;
+    position: absolute;
+    opacity: .5;
+}
+
+.grapes-img {
+    width: 40rem;
+    position: absolute;
+    opacity: .7;
+}
+
+/* End of Section 3 */
