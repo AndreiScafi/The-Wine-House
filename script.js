@@ -1,6 +1,7 @@
 
 /* My own solution */
 
+/* 
 let counter = 1;
 
 window.addEventListener('wheel', (e) => {
@@ -24,33 +25,55 @@ window.addEventListener('wheel', (e) => {
 
     console.log(counter)
 
-})
+}) 
+*/
 
 /* End of My own solution */
 
 /* Professor's Code */
 
-/* let counter = 1;
+let counter1 = 0;
+let counter2 = 1;
+
+const sections = document.querySelectorAll("section");
 
 window.addEventListener('wheel', (e) => {
-    if (e.deltaY > 0) {
-        document.querySelector(`.section-${counter}`).style.left = "-100vw";
-        counter++;
-        if (counter > 5) {
-            counter = 1;
-        }
-    } else {
-        counter--;
-        if (counter < 1) {
-            counter = 5;
-        }
-        document.querySelector(`.section-${counter}`).style.left = "0";
 
+    const deltaY = e.deltaY > 0;
+
+    if (deltaY) {
+        counter1++;
+        counter2++;
+    } else {
+        counter1--;
+        counter2--;
     }
 
-    console.log(counter);
+    if (counter1 === 5) {
+        sections.forEach(section => {
+            section.style.left = '0';
+        });
+        counter1 = 0;
+        counter2 = 1;
+        return;
+    }
 
-      document.querySelector(`.section-${counter}`).style.left = "-100vw"; 
-}) */
+    if (counter1 === -1) {
+        sections.forEach(section => {
+            if (section.classList[0] === 'section-5') {
+                return;
+            } else {
+                section.style.left = '-100vw';
+            }
+        });
+        counter1 = 4;
+        counter2 = 5;
+        return;
+    }
+
+    document.querySelector(`.section-${deltaY ? counter1 : counter2}`).style.left = `${deltaY ? '-100vw' : '0'}`;
+
+    console.log(counter1, counter2);
+})
 
 /* End of Professor's Code */
