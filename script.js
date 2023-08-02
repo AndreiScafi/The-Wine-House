@@ -1,7 +1,13 @@
 
 /* My own solution */
 
-/* 
+
+const progress = document.querySelector('.progress h2');
+const progressCounter = () => {
+    progress.textContent = `${counter}/5`
+}
+
+
 let counter = 1;
 
 window.addEventListener('wheel', (e) => {
@@ -23,15 +29,17 @@ window.addEventListener('wheel', (e) => {
         counter = 5;
     }
 
+    progressCounter();
+
     console.log(counter)
 
-}) 
-*/
+})
+
 
 /* End of My own solution */
 
 /* Professor's Code */
-
+/* 
 let counter1 = 0;
 let counter2 = 1;
 
@@ -75,5 +83,5 @@ window.addEventListener('wheel', (e) => {
 
     console.log(counter1, counter2);
 })
-
+ */
 /* End of Professor's Code */
