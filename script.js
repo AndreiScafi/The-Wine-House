@@ -1,7 +1,7 @@
 
 /* My own solution */
 
-/* 
+
 const progress = document.querySelector('.progress h2');
 const circles = document.querySelectorAll('.circle');
 
@@ -17,22 +17,32 @@ const progressCounter = () => {
 
 let counter = 1;
 
+document.querySelector('.section-1-wrapper').style.transform = 'scale(1)';
+
 window.addEventListener('wheel', (e) => {
     if (e.deltaY > 0 && counter < 5) {
         document.querySelector(`.section-${counter}`).style.left = "-100vw";
+        document.querySelector(`.section-${counter}-wrapper`).style.transform = "scale(1.5)"
+        document.querySelector(`.section-${counter + 1}-wrapper`).style.transform = "scale(1)";
         counter++;
     } else if (e.deltaY < 0 && counter > 1) {
         counter--;
         document.querySelector(`.section-${counter}`).style.left = "0";
+        document.querySelector(`.section-${counter}-wrapper`).style.transform = "scale(1)"
+        document.querySelector(`.section-${counter + 1}-wrapper`).style.transform = "scale(1.5)";
     } else if (e.deltaY > 0 && counter >= 5) {
         for (let i = 1; i <= 5; i++) {
             document.querySelector(`.section-${i}`).style.left = "0";
         }
+        document.querySelector('.section-1-wrapper').style.transform = 'scale(1)';
+        document.querySelector('.section-5-wrapper').style.transform = 'scale(1.5)';
         counter = 1;
     } else if (e.deltaY < 0 && counter <= 1) {
         for (let i = 1; i < 5; i++) {
             document.querySelector(`.section-${i}`).style.left = "-100vw";
         }
+        document.querySelector('.section-1-wrapper').style.transform = 'scale(1.5)';
+        document.querySelector('.section-5-wrapper').style.transform = 'scale(1)';
         counter = 5;
     }
 
@@ -48,11 +58,15 @@ const leftBtn = document.querySelector('.left-btn');
 rightBtn.addEventListener('click', () => {
     if (counter < 5) {
         document.querySelector(`.section-${counter}`).style.left = "-100vw";
+        document.querySelector(`.section-${counter}-wrapper`).style.transform = "scale(1.5)"
+        document.querySelector(`.section-${counter + 1}-wrapper`).style.transform = "scale(1)";
         counter++;
     } else if (counter >= 5) {
         for (let i = 1; i <= 5; i++) {
             document.querySelector(`.section-${i}`).style.left = "0";
         }
+        document.querySelector('.section-1-wrapper').style.transform = 'scale(1)';
+        document.querySelector('.section-5-wrapper').style.transform = 'scale(1.5)';
         counter = 1;
     }
 
@@ -63,10 +77,14 @@ leftBtn.addEventListener('click', () => {
     if (counter > 1) {
         counter--;
         document.querySelector(`.section-${counter}`).style.left = "0";
+        document.querySelector(`.section-${counter}-wrapper`).style.transform = "scale(1)"
+        document.querySelector(`.section-${counter + 1}-wrapper`).style.transform = "scale(1.5)";
     } else if (counter <= 1) {
         for (let i = 1; i < 5; i++) {
             document.querySelector(`.section-${i}`).style.left = "-100vw";
         }
+        document.querySelector('.section-1-wrapper').style.transform = 'scale(1.5)';
+        document.querySelector('.section-5-wrapper').style.transform = 'scale(1)';
         counter = 5;
     }
 
@@ -84,11 +102,11 @@ grapesImage.addEventListener('mouseout', () => {
     section3Wrapper.style.opacity = '1';
 });
 
- */
+
 /* End of My own solution */
 
 /* Professor's Code */
-
+/* 
 let counter1 = 0;
 let counter2 = 1;
 let bool = true;
@@ -212,5 +230,5 @@ document.querySelector(".grapes-img").addEventListener("mouseout", () => {
 menu.addEventListener("click", () => {
     document.querySelector(".navbar").classList.toggle("change");
 });
-
+ */
 /* End of Professor's Code */
