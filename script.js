@@ -1,7 +1,7 @@
 
 /* My own solution */
 
-
+/* 
 const progress = document.querySelector('.progress h2');
 const circles = document.querySelectorAll('.circle');
 
@@ -84,11 +84,11 @@ grapesImage.addEventListener('mouseout', () => {
     section3Wrapper.style.opacity = '1';
 });
 
-
+ */
 /* End of My own solution */
 
 /* Professor's Code */
-/* 
+
 let counter1 = 0;
 let counter2 = 1;
 let bool = true;
@@ -212,5 +212,5 @@ document.querySelector(".grapes-img").addEventListener("mouseout", () => {
 menu.addEventListener("click", () => {
     document.querySelector(".navbar").classList.toggle("change");
 });
- */
+
 /* End of Professor's Code */
