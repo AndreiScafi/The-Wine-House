@@ -476,30 +476,36 @@ section {
         width: 100%;
         height: .3rem;
         background-color: #d50000;
+        transition: transform .5s;
     }
 
-    .menu-line-1 {
+    .change .menu-line-1 {
         transform: rotate(40deg) translate(.5rem, 1rem);
     }
 
-    .menu-line-2 {
+    .change .menu-line-2 {
         transform: translate(-.2rem, 2rem);
     }
 
-    .menu-line-3 {
+    .change .menu-line-3 {
         transform: rotate(-40deg) translate(.5rem, -1rem);
     }
 
     .nav-list {
         position: absolute;
         top: 5rem;
-        right: 0;
+        right: -21rem;
         flex-direction: column;
         height: calc(100vh - 5rem);
         background-color: #333;
         justify-content: start;
         padding: 2rem;
         border-radius: .5rem 0 0 0;
+        transition: right .5s;
+    }
+
+    .change .nav-list {
+        right: 0;
     }
 
     .nav-link {

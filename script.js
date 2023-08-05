@@ -1,6 +1,13 @@
 
 /* My own solution */
 
+const menu = document.querySelector('.menu');
+const navbar = document.querySelector('.navbar');
+
+menu.addEventListener('click', () => {
+    navbar.classList.toggle('change');
+});
+
 
 const progress = document.querySelector('.progress h2');
 const circles = document.querySelectorAll('.circle');
